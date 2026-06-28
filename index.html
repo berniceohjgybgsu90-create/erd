@@ -1,314 +1,253 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ton Age · Tecidos & Confeccões</title>
-  <!-- Favicon inline (base64) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧵</text></svg>">
-  <!-- Bootstrap 5 + Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Ton Age · Moda Feminina</title>
+  <!-- Bootstrap 5 + ícones -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts (opcional, mas agrega) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Favicon inline (base64) gerado a partir de um ícone simples de vestido + T -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23d63384'/%3E%3Ctext x='50' y='72' font-size='58' font-family='Arial, sans-serif' font-weight='bold' fill='white' text-anchor='middle'%3ET%3C/text%3E%3Cpath d='M30 30 L70 30 L65 55 L50 70 L35 55 L30 30' stroke='white' stroke-width='5' fill='none' /%3E%3C/svg%3E" type="image/svg+xml">
   <style>
     body {
-      background: #f8f6f0;
-      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      font-family: 'Inter', sans-serif;
+      background: #faf6f2;
+      color: #2d1b1b;
     }
     .navbar-brand {
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 1px;
     }
-    .brand-highlight {
-      color: #b68b5b;
+    .brand-pink {
+      color: #d63384;
     }
-    .hero-section {
-      background: linear-gradient(145deg, #e8e0d3 0%, #d9cfbe 100%);
-      padding: 4rem 0;
-      border-bottom: 4px solid #b68b5b;
+    .bg-rose-soft {
+      background: #fce4ec;
     }
-    .hero-title {
-      font-size: 3.2rem;
-      font-weight: 300;
-      letter-spacing: 2px;
-      color: #2c2b28;
+    .btn-outline-rose {
+      color: #d63384;
+      border-color: #d63384;
     }
-    .hero-title strong {
-      font-weight: 600;
-      color: #8b6a41;
-    }
-    .btn-outline-gold {
-      border: 2px solid #8b6a41;
-      color: #8b6a41;
-      background: transparent;
-      transition: 0.2s;
-    }
-    .btn-outline-gold:hover {
-      background: #8b6a41;
+    .btn-outline-rose:hover {
+      background: #d63384;
       color: #fff;
     }
-    .info-card {
-      background: #ffffffdd;
-      backdrop-filter: blur(2px);
-      border: none;
-      border-radius: 28px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.04);
-      transition: all 0.15s ease;
-      height: 100%;
+    .btn-rose {
+      background: #d63384;
+      color: #fff;
     }
-    .info-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 40px rgba(0,0,0,0.06);
-    }
-    .info-card i {
-      color: #8b6a41;
-      font-size: 2.4rem;
+    .btn-rose:hover {
+      background: #b52b6f;
+      color: #fff;
     }
     .section-title {
-      color: #3d3b36;
-      font-weight: 300;
-      letter-spacing: 1px;
-      border-bottom: 3px solid #b68b5b;
-      display: inline-block;
-      padding-bottom: 6px;
+      font-weight: 700;
+      color: #2d1b1b;
+      border-left: 6px solid #d63384;
+      padding-left: 16px;
     }
-    .footer {
-      background: #2c2b28;
-      color: #d6cec0;
-      border-top: 6px solid #b68b5b;
+    .card-hover {
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .footer a {
-      color: #d6cec0;
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(214, 51, 132, 0.15);
+    }
+    .info-badge {
+      background: #f8f0ec;
+      border-radius: 40px;
+      padding: 10px 22px;
+    }
+    .footer-social i {
+      font-size: 1.6rem;
+      margin: 0 10px;
+      color: #5a3d3d;
+      transition: color 0.2s;
+    }
+    .footer-social i:hover {
+      color: #d63384;
+    }
+    .hero-bg {
+      background: linear-gradient(135deg, #fce4ec 0%, #f8d7da 100%);
+      padding: 3rem 0;
+    }
+    .text-shadow-light {
+      text-shadow: 0 2px 4px rgba(255, 255, 255, 0.6);
+    }
+    .icon-lg {
+      font-size: 2.2rem;
+      color: #d63384;
+    }
+    .border-rose {
+      border-color: #d63384 !important;
+    }
+    .cidade-cor {
+      color: #a1425c;
+    }
+    .whatsapp-float {
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
       text-decoration: none;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
       transition: 0.2s;
     }
+    .whatsapp-float:hover {
+      background: #1ebe5c;
+      color: white;
+      transform: scale(1.05);
+    }
+    .list-unstyled i {
+      width: 1.6rem;
+      color: #d63384;
+    }
+    .footer {
+      background: #2d1b1b;
+      color: #e4d5d0;
+    }
+    .footer a {
+      color: #e4d5d0;
+      text-decoration: none;
+    }
     .footer a:hover {
-      color: #b68b5b;
+      color: #f8c8d8;
     }
-    .list-unstyled li {
-      margin-bottom: 0.5rem;
-    }
-    .bi-whatsapp {
-      color: #25d366;
-    }
-    .badge-cnpj {
-      background: #e4dccc;
-      color: #3d3b36;
-      font-weight: 500;
-      padding: 0.5rem 1.2rem;
-      border-radius: 40px;
+    .favicon-demo {
+      background: #d63384;
+      color: white;
+      border-radius: 8px;
+      padding: 4px 12px;
+      font-weight: 600;
       font-size: 0.9rem;
-    }
-    @media (max-width: 576px) {
-      .hero-title {
-        font-size: 2.4rem;
-      }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom border-2 border-rose">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <span class="fs-3 me-2">🧵</span>
-        <span class="fw-bold" style="color: #2c2b28;">Ton<span class="brand-highlight">Age</span></span>
+      <a class="navbar-brand fw-bold fs-3" href="#">
+        <i class="bi bi-bag-heart brand-pink me-2"></i> Ton<span class="brand-pink">Age</span>
       </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" 
-              aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="favicon-demo me-2 d-none d-sm-inline"><i class="bi bi-check-circle-fill me-1"></i> favicon T</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarMain">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Início</a></li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
           <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-          <li class="nav-item ms-lg-3">
-            <span class="badge-cnpj"><i class="bi bi-buildings me-1"></i> CNPJ 07.027.720/0001-90</span>
-          </li>
+          <li class="nav-item"><a class="btn btn-outline-rose ms-2 px-4" href="#"><i class="bi bi-cart3 me-1"></i> Coleção</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero-section">
+  <!-- Hero / Destaque -->
+  <section class="hero-bg py-5">
     <div class="container">
       <div class="row align-items-center g-4">
-        <div class="col-lg-8">
-          <h1 class="hero-title">
-            Tecidos com <strong>alma</strong> <br>e <strong>atemporalidade</strong>
-          </h1>
-          <p class="fs-5 text-secondary mt-3" style="color: #4a4640 !important;">
-            <i class="bi bi-geo-alt-fill me-2" style="color: #8b6a41;"></i> 
-            Rua Beberibe, 45 · São Sebastião · Porto Alegre - RS
-          </p>
+        <div class="col-lg-7">
+          <span class="badge bg-rose-soft text-dark px-4 py-2 mb-3 rounded-pill"><i class="bi bi-tags me-2"></i>Novidades outono/inverno</span>
+          <h1 class="display-4 fw-bold text-shadow-light">Estilo que <span class="brand-pink">transforma</span></h1>
+          <p class="lead fs-5">Peças exclusivas para a mulher moderna. Conforto, tendência e atitude.</p>
           <div class="d-flex flex-wrap gap-3 mt-4">
-            <a href="#contato" class="btn btn-outline-gold px-5 py-2 rounded-pill fw-semibold">
-              <i class="bi bi-telephone-fill me-2"></i>Fale conosco
-            </a>
-            <a href="#" class="btn btn-outline-secondary px-4 py-2 rounded-pill border-0 text-dark bg-white bg-opacity-50">
-              <i class="bi bi-whatsapp me-2"></i>(51) 3311-4333
-            </a>
+            <a href="#" class="btn btn-rose btn-lg px-5 py-3 rounded-pill"><i class="bi bi-grid-3x3-gap-fill me-2"></i>Ver coleção</a>
+            <a href="#contato" class="btn btn-outline-secondary btn-lg px-5 py-3 rounded-pill border-rose"><i class="bi bi-geo-alt me-2"></i>Nossa loja</a>
+          </div>
+          <div class="mt-4 d-flex flex-wrap gap-4">
+            <div><i class="bi bi-truck icon-lg me-2"></i> <span class="fw-semibold">Entregas rápidas</span></div>
+            <div><i class="bi bi-arrow-repeat icon-lg me-2"></i> <span class="fw-semibold">Troca fácil</span></div>
           </div>
         </div>
-        <div class="col-lg-4 text-lg-end text-center">
-          <span class="badge bg-white text-dark px-4 py-3 rounded-5 shadow-sm" style="font-size: 1rem;">
-            <i class="bi bi-calendar-check me-2" style="color: #8b6a41;"></i> 
-            Desde 13/10/2004
-          </span>
-          <div class="mt-3">
-            <i class="bi bi-star-fill" style="color: #b68b5b;"></i>
-            <i class="bi bi-star-fill" style="color: #b68b5b;"></i>
-            <i class="bi bi-star-fill" style="color: #b68b5b;"></i>
-            <i class="bi bi-star-fill" style="color: #b68b5b;"></i>
-            <i class="bi bi-star-fill" style="color: #b68b5b;"></i>
-            <span class="ms-2 fw-light text-muted">+18 anos de tradição</span>
+        <div class="col-lg-5 text-center">
+          <img src="https://via.placeholder.com/400x300/FFFFFF/8B5A5A?text=TON+AGE+FASHION" alt="Moda feminina" class="img-fluid rounded-4 shadow" style="max-height: 280px; object-fit: cover; width: 100%;">
+          <div class="mt-3 d-flex justify-content-center gap-2">
+            <span class="badge bg-white text-dark px-3 py-2 rounded-pill shadow-sm"><i class="bi bi-star-fill text-warning me-1"></i>4.9 (200+)</span>
+            <span class="badge bg-white text-dark px-3 py-2 rounded-pill shadow-sm"><i class="bi bi-heart-fill brand-pink me-1"></i> +5k clientes</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- DESTAQUES / ICONES + FRASES -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row text-center g-4">
-        <div class="col-md-4">
-          <div class="info-card p-4 d-flex flex-column align-items-center justify-content-center">
-            <i class="bi bi-scissors fs-1 mb-3"></i>
-            <h5 class="fw-bold">Cortes precisos</h5>
-            <p class="text-muted small">Tecidos de primeira linha com acabamento impecável para suas confecções.</p>
+  <!-- Frases / Diferenciais -->
+  <section class="container py-5">
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <div class="card border-0 bg-transparent card-hover">
+          <div class="card-body">
+            <i class="bi bi-gem display-4 brand-pink"></i>
+            <h5 class="card-title fw-bold mt-3">Atemporal</h5>
+            <p class="card-text text-secondary">Peças que transcendem estações, com design pensado para durar.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="info-card p-4 d-flex flex-column align-items-center justify-content-center">
-            <i class="bi bi-box-seam fs-1 mb-3"></i>
-            <h5 class="fw-bold">Variedade em estoque</h5>
-            <p class="text-muted small">Algodão, linho, seda, malhas e muito mais. Sempre com novidades.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 bg-transparent card-hover">
+          <div class="card-body">
+            <i class="bi bi-hand-thumbs-up display-4 brand-pink"></i>
+            <h5 class="card-title fw-bold mt-3">Qualidade garantida</h5>
+            <p class="card-text text-secondary">Tecnologia e tecidos selecionados para máximo conforto.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="info-card p-4 d-flex flex-column align-items-center justify-content-center">
-            <i class="bi bi-truck fs-1 mb-3"></i>
-            <h5 class="fw-bold">Entrega ágil</h5>
-            <p class="text-muted small">Atendemos Porto Alegre e região com rapidez e pontualidade.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="card border-0 bg-transparent card-hover">
+          <div class="card-body">
+            <i class="bi bi-recycle display-4 brand-pink"></i>
+            <h5 class="card-title fw-bold mt-3">Moda consciente</h5>
+            <p class="card-text text-secondary">Produção responsável e parcerias com fornecedores locais.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SOBRE / INFORMAÇÕES ESTRUTURADAS -->
-  <section id="sobre" class="py-5 bg-white">
+  <!-- Sobre / informações da empresa + CNPJ etc -->
+  <section id="sobre" class="py-5 bg-white border-top border-light">
     <div class="container">
-      <div class="row g-5 align-items-center">
+      <h2 class="section-title mb-5 display-6">Sobre a <span class="brand-pink">Ton Age</span></h2>
+      <div class="row g-5">
         <div class="col-lg-6">
-          <h2 class="section-title mb-4">Sobre a Novaton</h2>
-          <p class="lead fw-light" style="color: #3d3b36;">
-            <span class="fw-semibold">Ton Age</span> – tradição em tecidos desde 2004.
-          </p>
-          <p class="text-secondary">
-            Com mais de 18 anos de estrada, a <strong>Novaton Indústria e Comércio de Confecções LTDA</strong> 
-            é referência no varejo de tecidos em Porto Alegre. Nosso compromisso é oferecer qualidade, 
-            variedade e um atendimento que vai do varejo ao atacado.
-          </p>
+          <p class="fs-5 fw-light lh-lg">Há mais de duas décadas, a <strong>Ton Age</strong> veste a mulher com autenticidade. Nossa trajetória é marcada por coleções que equilibram tendência e conforto, sempre com um toque de brasilidade.</p>
+          <div class="info-badge d-inline-block mt-3">
+            <i class="bi bi-calendar-check me-2 brand-pink"></i> Data Situação Cadastral: <strong>13/10/2004</strong>
+          </div>
           <ul class="list-unstyled mt-4">
-            <li><i class="bi bi-check-circle-fill me-2" style="color: #8b6a41;"></i> <strong>Razão Social:</strong> Novaton Industria e Comercio de Confeccoes LTDA.</li>
-            <li><i class="bi bi-check-circle-fill me-2" style="color: #8b6a41;"></i> <strong>Nome Fantasia:</strong> Ton Age</li>
-            <li><i class="bi bi-check-circle-fill me-2" style="color: #8b6a41;"></i> <strong>CNPJ:</strong> 07.027.720/0001-90</li>
-            <li><i class="bi bi-check-circle-fill me-2" style="color: #8b6a41;"></i> <strong>Data de abertura:</strong> 13/10/2004</li>
+            <li class="mb-2"><i class="bi bi-building"></i> <strong>Razão Social:</strong> Novaton Industria e Comercio de Confeccoes LTDA.</li>
+            <li class="mb-2"><i class="bi bi-tag"></i> <strong>Nome Fantasia:</strong> Ton Age</li>
+            <li class="mb-2"><i class="bi bi-file-earmark-text"></i> <strong>CNPJ:</strong> 07.027.720/0001-90</li>
+            <li class="mb-2"><i class="bi bi-geo-alt"></i> <strong>Endereço:</strong> Rua Beberibe 45, Sao Sebastiao, Porto Alegre - RS, 91060-250</li>
+            <li><i class="bi bi-telephone"></i> <strong>Telefone:</strong> (51) 3311-4333</li>
           </ul>
-          <div class="mt-4 p-3 bg-light rounded-4 d-inline-block">
-            <i class="bi bi-geo-alt-fill me-2" style="color: #8b6a41;"></i> 
-            Rua Beberibe, 45 · São Sebastião · Porto Alegre/RS · CEP 91060-250
-          </div>
         </div>
         <div class="col-lg-6">
-          <div class="bg-light p-4 rounded-5 shadow-sm">
-            <div class="d-flex justify-content-around flex-wrap gap-3">
-              <div class="text-center">
-                <i class="bi bi-building fs-1" style="color: #b68b5b;"></i>
-                <p class="fw-bold mt-2 mb-0">Indústria</p>
-                <small class="text-secondary">própria</small>
-              </div>
-              <div class="text-center">
-                <i class="bi bi-people fs-1" style="color: #b68b5b;"></i>
-                <p class="fw-bold mt-2 mb-0">Equipe</p>
-                <small class="text-secondary">especializada</small>
-              </div>
-              <div class="text-center">
-                <i class="bi bi-award fs-1" style="color: #b68b5b;"></i>
-                <p class="fw-bold mt-2 mb-0">Qualidade</p>
-                <small class="text-secondary">certificada</small>
-              </div>
-            </div>
-            <hr class="my-3">
-            <div class="text-center">
-              <span class="badge bg-dark bg-opacity-10 text-dark px-4 py-2 rounded-pill">
-                <i class="bi bi-clock-history me-1"></i> Segunda a Sexta: 8h – 18h
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FRASE / CITAÇÃO -->
-  <div class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 text-center">
-        <blockquote class="blockquote p-4" style="background: #ede7db; border-radius: 60px 20px 60px 20px;">
-          <p class="fs-4 fst-italic text-secondary" style="color: #3d3b36 !important;">
-            “Tecido que veste história, conforto que atravessa gerações.”
-          </p>
-          <footer class="blockquote-footer mt-2">Ton Age · <cite title="Fonte">Novaton LTDA</cite></footer>
-        </blockquote>
-      </div>
-    </div>
-  </div>
-
-  <!-- CONTATO / RODAPÉ com informações -->
-  <section id="contato" class="py-5" style="background: #f0ebe1;">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-6">
-          <h3 class="section-title mb-4"><i class="bi bi-envelope-paper me-2"></i>Entre em contato</h3>
-          <p class="text-secondary">Estamos prontos para atender você, seja para uma compra ou parceria.</p>
-          <ul class="list-unstyled fs-6">
-            <li class="mb-3"><i class="bi bi-geo-alt me-3" style="color: #8b6a41; font-size: 1.4rem;"></i> Rua Beberibe, 45 · São Sebastião · Porto Alegre - RS</li>
-            <li class="mb-3"><i class="bi bi-telephone me-3" style="color: #8b6a41; font-size: 1.4rem;"></i> (51) 3311-4333</li>
-            <li class="mb-3"><i class="bi bi-envelope me-3" style="color: #8b6a41; font-size: 1.4rem;"></i> contato@tonage.com.br</li>
-            <li class="mb-3"><i class="bi bi-whatsapp me-3" style="color: #25d366; font-size: 1.4rem;"></i> (51) 9 9999-9999</li>
-          </ul>
-          <div class="mt-3">
-            <span class="badge bg-white text-dark px-3 py-2 rounded-pill shadow-sm me-2">
-              <i class="bi bi-cnpj me-1"></i> CNPJ: 07.027.720/0001-90
-            </span>
-            <span class="badge bg-white text-dark px-3 py-2 rounded-pill shadow-sm">
-              <i class="bi bi-calendar me-1"></i> 13/10/2004
-            </span>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="bg-white p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center">
-            <h5><i class="bi bi-clock me-2" style="color: #8b6a41;"></i> Horário de funcionamento</h5>
-            <div class="d-flex justify-content-between border-bottom py-2">
-              <span>Segunda – Sexta</span>
-              <span>08:00 – 18:00</span>
-            </div>
-            <div class="d-flex justify-content-between border-bottom py-2">
-              <span>Sábado</span>
-              <span>09:00 – 13:00</span>
-            </div>
-            <div class="d-flex justify-content-between py-2">
-              <span>Domingo</span>
-              <span>Fechado</span>
+          <div class="card border-0 shadow-sm p-4 bg-rose-soft">
+            <h5 class="fw-bold"><i class="bi bi-pin-map-fill brand-pink me-2"></i> Onde estamos</h5>
+            <p class="mb-1"><i class="bi bi-geo-alt-fill brand-pink me-2"></i> Rua Beberibe 45, Sao Sebastiao</p>
+            <p class="mb-1"><i class="bi bi-building brand-pink me-2"></i> Porto Alegre - RS</p>
+            <p class="mb-0"><i class="bi bi-mailbox brand-pink me-2"></i> CEP 91060-250</p>
+            <hr class="border-rose">
+            <div class="d-flex align-items-center mt-2">
+              <i class="bi bi-whatsapp display-6 me-3 text-success"></i>
+              <span><strong>(51) 3311-4333</strong> · também no WhatsApp</span>
             </div>
             <div class="mt-3">
-              <i class="bi bi-pin-map-fill me-1" style="color: #b68b5b;"></i> 
-              <span class="text-secondary">CEP: 91060-250 · Porto Alegre</span>
+              <span class="badge bg-dark-subtle text-dark px-3 py-2"><i class="bi bi-clock me-1"></i> Seg–Sex 9h–19h · Sáb 9h–15h</span>
             </div>
           </div>
         </div>
@@ -316,29 +255,111 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Vitrine rápida (produtos/sugestões) -->
+  <section class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="section-title mb-0">Destaques da coleção</h2>
+      <a href="#" class="text-decoration-none brand-pink fw-semibold">Ver todos <i class="bi bi-arrow-right"></i></a>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card card-hover border-0 shadow-sm h-100">
+          <img src="https://via.placeholder.com/300x200/F8D7DA/D63384?text=Vestido+Floral" class="card-img-top rounded-top" alt="Vestido floral">
+          <div class="card-body">
+            <h6 class="card-title">Vestido Floral Midi</h6>
+            <p class="card-text text-secondary small">Tecido leve, alças ajustáveis.</p>
+            <span class="badge bg-rose-soft text-dark">R$ 189,90</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-hover border-0 shadow-sm h-100">
+          <img src="https://via.placeholder.com/300x200/FCE4EC/D63384?text=Blazer+Elegante" class="card-img-top rounded-top" alt="Blazer">
+          <div class="card-body">
+            <h6 class="card-title">Blazer Alfaiataria</h6>
+            <p class="card-text text-secondary small">Modelagem estruturada, mix de cores.</p>
+            <span class="badge bg-rose-soft text-dark">R$ 279,00</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-hover border-0 shadow-sm h-100">
+          <img src="https://via.placeholder.com/300x200/FFFFFF/D63384?text=Calça+Wide" class="card-img-top rounded-top" alt="Calça wide">
+          <div class="card-body">
+            <h6 class="card-title">Calça Wide Leg</h6>
+            <p class="card-text text-secondary small">Conforto e estilo com tecido fluido.</p>
+            <span class="badge bg-rose-soft text-dark">R$ 219,90</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato / Localização + redes sociais -->
+  <section id="contato" class="py-5 bg-rose-soft">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="section-title display-6">Entre em contato</h2>
+          <p class="lead fw-light">Estamos prontos para atender você. Venha conhecer nossa loja ou fale pelo telefone.</p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-3"><i class="bi bi-telephone-fill brand-pink me-3"></i> (51) 3311-4333</li>
+            <li class="mb-3"><i class="bi bi-envelope-fill brand-pink me-3"></i> contato@tonage.com.br</li>
+            <li class="mb-3"><i class="bi bi-geo-alt-fill brand-pink me-3"></i> Rua Beberibe 45, Porto Alegre - RS</li>
+          </ul>
+          <div class="footer-social mt-3">
+            <a href="#" class="text-decoration-none"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center text-lg-end">
+          <div class="bg-white p-4 rounded-4 shadow d-inline-block">
+            <i class="bi bi-pin-map-fill display-3 brand-pink"></i>
+            <p class="mt-2 fw-bold mb-0">Venha nos visitar</p>
+            <p class="small text-secondary">Sao Sebastiao, Porto Alegre</p>
+            <a href="#" class="btn btn-rose rounded-pill px-5"><i class="bi bi-whatsapp me-2"></i>Fale conosco</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé com dados jurídicos -->
   <footer class="footer py-4">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6">
-          <span class="fw-light">© 2026 <span class="fw-bold">Ton Age</span> · Novaton Ind. e Com. de Confecções LTDA</span>
-          <br>
-          <small class="text-secondary-emphasis">Rua Beberibe, 45 · São Sebastião · Porto Alegre/RS</small>
+          <span class="fw-bold fs-5"><i class="bi bi-bag-heart me-2"></i>Ton Age</span>
+          <p class="small mt-2 mb-0">CNPJ: 07.027.720/0001-90 · Novaton Industria e Comercio de Confeccoes LTDA.</p>
+          <p class="small">Rua Beberibe 45, Porto Alegre RS · (51) 3311-4333</p>
         </div>
-        <div class="col-md-6 text-md-end mt-3 mt-md-0">
-          <a href="#" class="me-3"><i class="bi bi-instagram fs-5"></i></a>
-          <a href="#" class="me-3"><i class="bi bi-facebook fs-5"></i></a>
-          <a href="#" class="me-3"><i class="bi bi-youtube fs-5"></i></a>
-          <a href="#" class="me-3"><i class="bi bi-whatsapp fs-5"></i></a>
-          <span class="ms-2 d-inline-block">
-            <i class="bi bi-c-circle"></i> 2004-2026
-          </span>
+        <div class="col-md-6 text-md-end">
+          <span class="badge bg-light text-dark px-3 py-2"><i class="bi bi-calendar3 me-1"></i> desde 2004</span>
+          <span class="badge bg-light text-dark ms-2 px-3 py-2"><i class="bi bi-shield-check"></i> varejo feminino</span>
+          <p class="small mt-2 mb-0">&copy; 2026 Ton Age · todos os direitos reservados</p>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Bootstrap JS (opcional, mas para toggle) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Botão flutuante WhatsApp (estilo) -->
+  <div class="position-fixed bottom-0 end-0 p-4" style="z-index: 1050;">
+    <a href="#" class="whatsapp-float" data-bs-toggle="tooltip" title="Fale conosco pelo WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- Bootstrap JS para componentes (navegação, tooltips) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  </script>
 </body>
 </html>
